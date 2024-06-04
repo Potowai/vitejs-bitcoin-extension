@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Bitcoin widget",
+  "description": "Extension that includes a popup and requests host permissions and storage permissions .",
+  "version": "1.0",
+  "icons": {
+    "128": "images/bitcoin_99429(1.png"
+  },
+  "action": {
+    "default_title": "Click to see Bitcoin current price",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "permissions": ["scripting"],
+  "host_permissions": ["https://*/*", "http://*/*"]
+}
