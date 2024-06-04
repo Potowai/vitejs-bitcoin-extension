@@ -7,17 +7,12 @@
     "128": "images/bitcoin_99429.png"
   },
   "action": {
-      "default_title":"Click to see Bitcoin current price",
-      "default_popup": "popup.html"
+    "default_title": "Click to see Bitcoin current price",
+    "default_popup": "index.html"
   },
-  "background":  {
-      "service_worker" : "service-worker.js"
+  "background": {
+    "service_worker": "service-worker.js"
   },
-  "permissions": [
-    "scripting"
-  ],
-  "host_permissions":[
-      "https://*/*",
-      "http://*/*"
-  ]
+  "permissions": ["scripting"],
+  "host_permissions": ["https://*/*", "http://*/*"]
 }
