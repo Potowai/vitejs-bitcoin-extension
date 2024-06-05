@@ -11,12 +11,12 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`HTTP error: Status ${response.status}`);
-      }
-      let json = await response.json(); // Attendre que la promesse soit résolue
-      let price = json.bitcoin.eur;
+      // const response = await fetch(url);
+      // if (!response.ok) {
+      //   throw new Error(`HTTP error: Status ${response.status}`);
+      // }
+      // let json = await response.json(); // Attendre que la promesse soit résolue
+      // let price = json.bitcoin.eur;
       setData(price);
       setError(null);
     } catch (err) {
@@ -39,20 +39,19 @@ function App() {
 
   return (
     <>
-      <div className="container">
         <div className="card">
           {loading ? (
             <div className="loading">Loading...</div>
-          ) : error ? (
-            <div className="error">{error}</div>
           ) : (
+          // ) : error ? (
+          //   <div className="error">{error}</div>
+          // ) : (
             <div>
               <h1 className="title">Bitcoin Price</h1>
-              <h2 className="price">{data} €</h2>
+              <h2 className="price">700000 €</h2>
             </div>
           )}
         </div>
-      </div>
     </>
   );
 }
