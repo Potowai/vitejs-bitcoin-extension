@@ -27,6 +27,11 @@ function App() {
     }
   };
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(data);
+    console.log("Price copied to clipboard!");
+  };
+
   useEffect(() => {
     fetchData();
     const interval = setInterval(() => {
@@ -40,6 +45,7 @@ function App() {
   return (
     <>
         <div className="card">
+          <img src={viteLogo} alt="Vite logo" className="logo" />
           {loading ? (
             <div className="loading">Loading...</div>
           ) : error ? (
@@ -47,7 +53,7 @@ function App() {
           ) : (
             <div>
               <h1 className="title">Bitcoin Price</h1>
-              <h2 className="price">{data} €</h2>
+              <h2 className="price" onClick={handleCopy}>{data} €</h2>
             </div>
           )}
         </div>
